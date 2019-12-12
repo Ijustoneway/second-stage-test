@@ -1,0 +1,584 @@
+@import './reset.scss';
+@mixin container {
+	width: 1200px;
+	margin: 0 auto;
+}
+$huaweired :#ca151d;
+#header-nav{
+	min-width: 1200px;
+	height: 36px;
+}
+.head-nav{
+	@include container;
+	height: 36px;
+	background-color: #f9f9f9;
+	line-height: 36px;
+	margin-top: 18px;
+}
+@mixin top-line {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 10px;
+	top: 13px;
+	left: 0;
+	background: #a4a4a4;
+}
+.h-n-left{
+	ul{
+		float: left;
+		li{
+			float: left;
+			padding:0 8px;
+			position: relative;
+			&:before{
+				@include top-line;
+			}
+			&:nth-child(1) a{
+				color: $huaweired;
+			}
+			&:nth-child(1):before{
+				display: none;
+				
+			}
+			a{
+				color: #a4a4a4;
+				
+				&:hover{
+					color: $huaweired;
+				}
+			}
+		}
+	}
+}
+.h-n-right{
+	ul{
+		float: right;
+		li{
+			float: left;
+			padding:0 8px;
+			position: relative;
+			&:before{
+				@include top-line;
+			}
+			
+			&:nth-child(1):before{
+				display: none;
+				
+			}
+			a{
+				color: #a4a4a4;
+				
+				&:hover{
+					color: $huaweired;
+				}
+			}
+		}
+	}
+}
+.h-n-r-box>a{
+	margin: 0 4px;
+}
+.shop-car:before{
+	display: none;
+}
+.shop-car{
+	background: #f2f2f2;
+	width: 76px;
+	height: 36px;
+	position: relative;
+}
+.shop-car a{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 36px;
+	line-height: 36px;
+	padding-left: 10px;
+}
+// 头部logo
+#logo{
+	min-width: 1200px;
+	height: 41px;
+	padding: 18px 0 15px 0;
+}
+.head-logo{
+	@include container;
+	height: 41px;
+	line-height: 41px;
+}
+.logo-img{
+	float: left;
+}
+.logo-img h1 a{
+	display: block;
+	text-indent: -9999px;
+	width: 205px;
+	height: 36px;
+	background: url(../images/ia_10007.png) no-repeat;
+	background-size: 100%;
+	margin-right: 34px;
+}
+.logo-text{
+	float: left;
+	height: 41px;
+	line-height: 41px;
+}
+.logo-text a{
+	display: block;
+	width: 74px;
+	height: 24px;
+	float: left;
+	margin: 7px 24px 0 0;
+	color: #333;
+	font-size: 16px;
+	&:nth-child(3),&:nth-child(4){
+		&:hover{
+			color: $huaweired;
+		}
+		width: 111px;
+		line-height: 24px;
+	}
+}
+.logo-text a img{
+	width: 74px;
+	height: 24px;
+	vertical-align: top;
+}
+.logo-rigth{
+	float: right;
+	form{
+		width: 318px;
+		height: 28px;
+		background: #f0f0f0;
+		border: 1px solid #f0f0f0;
+		border-radius: 15px;
+		position: relative;
+		input{
+			width: 285px;
+			height: 28px;
+			border: none;
+			float: left;
+			text-indent: 15px;
+			border-radius: 15px;
+			background: #f0f0f0;
+			}
+		.search-show{
+			background: #fff;
+			border-radius: 10px;
+			max-height: 280px;
+			overflow: hidden;
+			display: none;
+			position: absolute;
+			top: 40px;
+			left: 0;
+			width: 100%;
+			box-sizing: border-box;
+			padding-left: 6px;
+			z-index: 300;
+			ul li{
+				height: 28px;
+				line-height: 28px;
+			}
+		}	
+		.l-search{
+			position: absolute;
+			max-width: 260px;
+			right: 40px;
+			bottom: -8px;
+			z-index: 311;
+			white-space: nowrap;
+			overflow: hidden;
+			a:nth-child(1){
+				color: $huaweired;
+				margin-right: 8px;
+			}
+		}
+		.fdj{
+			display: block;
+			width: 35px;
+			height: 30px;
+			color: #000000;
+			font-size: 18px;
+			position: absolute;
+			right: -10px;
+			bottom: 2px;
+		}
+		
+	}
+}
+
+.for-login{
+	width: 500px;
+	height: 500px;
+	position: fixed;
+	display: none;
+	z-index: 999;
+	top: 60px;
+	left: 0;
+	background: rgba(255,255,255,.8);
+	div{
+		height: 60px;
+		background: rgba(255,255,255,.9);
+	}
+	h4{
+		font-size: 24px;
+		color: #777;
+		text-align: center;
+	}
+	form{
+		text-align: center;
+		input{
+			margin: 30px auto;
+			width: 300px;
+			height: 40px;
+			background: none;
+			border: none;
+			border-bottom: 2px solid #777;
+		}
+		.but{
+			width: 300px;
+			height: 50px;
+			border-radius: 25px;
+			border: none;
+			background: rgba(255,0,0,0.4);
+			margin-bottom: 20pxpx;
+		}
+		#clo{
+			width: 300px;
+			height: 50px;
+			background: #ccc;
+			border-radius: 25px;
+			border: none;
+			margin: 0 auto;
+		}
+	}
+}
+.main{
+	margin-top: 20px;
+	min-width: 1200px;
+	background: #F5F5F5;
+	.main-title{
+		@include container;
+		.choice{
+			background: #fff;
+		}
+		h5{
+			height: 49px;
+			line-height: 19px;
+			padding: 14px 0 16px 0;
+			color: #333;
+			font-weight: bold;
+			b{
+				margin: 0 10px;
+			}
+		}
+		.c-line{
+			height: 35px;
+			line-height: 35px;
+			padding-left: 10px;
+			b{
+				color: #000000;
+				margin-right: 30px;
+			}
+		}
+	}
+}
+.footer-top{
+	min-width: 1200px;
+	height: 82px;
+	width: 100%;
+	margin-top: 60px;
+	background: #f9f9f9;
+	.ft{
+		@include container;
+		height: 40px;
+		padding: 22px 0 20px 0;
+		box-sizing: border-box;
+		line-height: 40px;
+		border-bottom: 1px solid rgba(0,0,0,0.01);
+		ul{
+			height: 40px;
+			line-height: 40px;
+			li{
+				float: left;
+				margin-right: 120px;
+				&:last-child{
+					margin-right: 0;
+					i{
+						background-position-x: -114px;
+					}
+				}
+				i{
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					margin-right: 15px;
+					vertical-align: middle;
+					background: url(../images/ia_10298.svg) no-repeat -74px 0px;
+				}
+				a{
+					color: #3a3a3a;
+					line-height: 40px;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+.footer{
+	min-width: 1200px;
+	background: #f9f9f9;
+	.f-about{
+		@include container;
+		padding: 23px 0 24px 0;
+		border: 1px solid rgba(0,0,0,0.1);
+		border-width: 1px 0;
+		dl{
+			float: left;
+			width: 153px;
+			float: left;
+			dt{
+				font-size: 14px;
+				color: #333;
+				margin-bottom: 7px;
+				line-height: 28px;
+			}
+			dd a{
+				font-size: 12px;
+				color: #777;
+				line-height: 22px;
+			}
+		}
+	}
+}
+.shoplist{
+	@include container;
+	background: #F5F5F5;
+	ul{
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		li{
+			width: 220px;
+			height: 322px;
+			margin: 10px;
+			padding: 20px;
+			box-sizing: border-box;
+			text-align: center;
+			background: #fff;
+			img{
+				width: 180px;
+				height: 180px;
+			}
+			p{
+				color: #333;
+				margin: 10px auto;
+			}
+			b{
+				color: #ca141d;
+				font-size: 18px;
+				font-weight: bold;
+			}
+			a{
+				display: block;
+				width: 100px;
+				height: 24px;
+				background: #fff;
+				color: $huaweired;
+				line-height: 24px;
+				border-radius: 10px;
+				text-align: center;
+				border: 1px solid $huaweired;
+				margin: 10px auto;
+				&:hover{
+					background: #ca151d;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+.shop-car{
+	position: relative;
+}
+.shop-show{
+	width: 250px;
+	display: none;
+	background: #fff;
+	position: absolute;
+	min-height: 90px;
+	max-height: 300px;
+	overflow-y: auto;
+	top: 36px;
+	left: -174px;
+	z-index: 500;
+	p{
+		color: #575757;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+	}
+	ul{
+		width: 250px;
+		li{
+			width: 250px;
+			height: 100px;
+			line-height: 60px;
+			border-bottom: 1px solid #f4f4f4;
+			padding-left: 6px;
+			display: flex;
+			position: relative;
+			img{
+				width: 80px;
+				height: 80px;
+			}
+			p{
+				height: 30px;
+			}
+			b{
+				
+				display: block;
+				color: #ca141d;
+				height: 30px;
+				font-size: 18px;
+				font-weight: bold;
+				margin-top: 10px;
+			}
+			span{
+				display: block;
+				position: absolute;
+				bottom: 20px;
+				right: 20px;
+				height: 30px;
+			}
+		}
+	}
+}
+.chat{
+	width: 262px;
+	float: right;
+	border-left: 1px solid rgba(0,0,0,0.1);
+	padding-left: 16px;
+	text-align: center;
+	p{
+		color: #575757;
+		font-weight: bold;
+		font-size: 24px;
+	}
+	span{
+		display: block;
+		color: #575757;
+		font-size: 14px;
+		margin: 10px auto;
+	}
+	.online{
+		display: block;
+		width: 170px;
+		height: 34px;
+		background: #333;
+		line-height: 34px;
+		border-radius: 17px;
+		margin: 0 auto;
+		font-weight: bold;
+		margin-bottom: 20px;
+		i{
+			display: inline-block;
+			width: 19px;
+			height: 20px;
+			vertical-align: middle;
+			margin-right: 8px;
+			background: url(../images/ia_10297.png) no-repeat -150px 0;
+		}
+	}
+	.attention{
+		a{
+			display: inline-block;
+			width: 24px;
+			height: 20px;
+			vertical-align: middle;
+			background: url(../images/ia_10001.svg) no-repeat -35px 0;
+		}
+	}
+}
+.map{
+	min-width: 1200px;
+	height: 114px;
+	.m-container{
+		@include container;
+		height: 114px;
+		box-sizing: border-box;
+		padding: 25px 0 28px 0;
+		a:hover{
+			color: $huaweired;
+		}
+		.f-logo{
+			float: left;
+			display: block;
+			height: 100%;
+			margin-right: 20px;
+			img{
+				width: 82px;
+				height: 20px;
+				margin-top: 10px;
+				vertical-align: top;
+			}
+		}
+		.huawei-list{
+			float: left;
+			margin: 6px 0;
+			a:hover{
+				color: $huaweired;
+			}
+			a{
+				display: inline-block;
+				float: left;
+				height: 14px;
+				color: #777;
+				margin:0 6px;
+				position: relative;
+				&:after{
+					content: '';
+					position: absolute;
+					width: 1px;
+					height: 10px;
+					top: 3px;
+					right: -5px;
+					background: #a4a4a4;
+					color: #777;
+				}
+				&:last-child:after{
+					display: none;
+				}
+			}
+			
+		}
+		.tell{
+			margin: 3px 0 6px 4px;
+			float: left;
+			color: #a4a4a4;
+			a{
+				margin: 0 2px;
+			}
+		}
+		p{
+			color: #a4a4a4;
+			float: left;
+			margin-left: 6px;
+		}
+		.business{
+			display: block;
+			float: right;
+			width: 70px;
+			height: 24px;
+			margin-top: -43px;
+			img{
+				width: 70px;
+				height: 24px;
+			}
+		}
+	}
+}
